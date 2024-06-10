@@ -21,7 +21,7 @@ S_sierra_1 <- cov(datos_sierra_1)
 # Obtener S de datos_sierra_2
 S_sierra_2 <- cov(datos_sierra_2)
 
-# Matriz de covarianza combinada Sp
+# n , total de datos de las sierras
 n1 <- nrow(datos_sierra_1)
 n2 <- nrow(datos_sierra_2)
 
@@ -41,8 +41,9 @@ T_cuadrado <- as.numeric(T_cuadrado)
 alpha <- 0.05
 # Numero de variables
 p <- ncol(datos_sierra_1)
-# Valor critico de chi-cuadrado
+# Valor critico chi-cuadrado
 valor_critico <- qchisq(1-alpha, df=p)
+valor_critico
 
 print("Valor de T_Cuadrado: ")
 print(T_cuadrado)
