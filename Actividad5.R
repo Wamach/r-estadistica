@@ -32,7 +32,7 @@ Sp <- ((1/n1)*S_sierra_1) + ((1/n2)*S_sierra_2)
 Sp_inv <- solve(Sp)
 
 
-# Estadistico de prueba T^2
+# Estadistico de prueba T^2 = (u1-u2)'Sp^-1(u1-u2)
 T_cuadrado <- t(diferencia_medias) %*% Sp_inv %*% diferencia_medias
 # Se convierte a numero para poder utilizarlo.
 T_cuadrado <- as.numeric(T_cuadrado)
